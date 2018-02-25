@@ -2,6 +2,7 @@
 # Unreal Generated Files #
 ##########################
 Build/*
+cmake-build-debug/*
 Binaries/*
 DerivedDataCache/*
 Intermediate/*
