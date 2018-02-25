@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/gabriel/Documents/Unreal Projects/EscapingRoom/Source/EscapingRoom/EscapingRoom.cpp" "/Users/gabriel/Documents/Unreal Projects/EscapingRoom/cmake-build-debug/CMakeFiles/PleaseIgnoreMe.dir/Source/EscapingRoom/EscapingRoom.cpp.o"
   "/Users/gabriel/Documents/Unreal Projects/EscapingRoom/Source/EscapingRoom/NewStaticMeshComponent.cpp" "/Users/gabriel/Documents/Unreal Projects/EscapingRoom/cmake-build-debug/CMakeFiles/PleaseIgnoreMe.dir/Source/EscapingRoom/NewStaticMeshComponent.cpp.o"
+  "/Users/gabriel/Documents/Unreal Projects/EscapingRoom/Source/EscapingRoom/OpenDoor.cpp" "/Users/gabriel/Documents/Unreal Projects/EscapingRoom/cmake-build-debug/CMakeFiles/PleaseIgnoreMe.dir/Source/EscapingRoom/OpenDoor.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

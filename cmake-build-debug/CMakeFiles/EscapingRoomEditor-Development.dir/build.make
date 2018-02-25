@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = "/Users/gabriel/Documents/Unreal Projects/EscapingRoom/cmake-
 include CMakeFiles/EscapingRoomEditor-Development.dir/progress.make
 
 CMakeFiles/EscapingRoomEditor-Development:
-	cd /Users/Shared/Epic\ Games/UE_4.18/Engine/Binaries/DotNET && mono UnrealBuildTool.exe EscapingRoomEditor Mac Development -project="/Users/gabriel/Documents/Unreal\ Projects/EscapingRoom/EscapingRoom.uproject" -game -progress
+	cd /Users/Shared/Epic\ Games/UE_4.18/Engine/Binaries/DotNET && mono UnrealBuildTool.exe EscapingRoomEditor Mac Development -project=/Users/gabriel/Documents/Unreal\ Projects/EscapingRoom/EscapingRoom.uproject -game -progress
 
 EscapingRoomEditor-Development: CMakeFiles/EscapingRoomEditor-Development
 EscapingRoomEditor-Development: CMakeFiles/EscapingRoomEditor-Development.dir/build.make

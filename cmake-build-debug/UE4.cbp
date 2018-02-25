@@ -5471,6 +5471,12 @@
 		<Unit filename="/Users/gabriel/Documents/Unreal Projects/EscapingRoom/Source/EscapingRoom/NewStaticMeshComponent.h">
 			<Option target="PleaseIgnoreMe"/>
 		</Unit>
+		<Unit filename="/Users/gabriel/Documents/Unreal Projects/EscapingRoom/Source/EscapingRoom/OpenDoor.cpp">
+			<Option target="PleaseIgnoreMe"/>
+		</Unit>
+		<Unit filename="/Users/gabriel/Documents/Unreal Projects/EscapingRoom/Source/EscapingRoom/OpenDoor.h">
+			<Option target="PleaseIgnoreMe"/>
+		</Unit>
 		<Unit filename="/Users/gabriel/Documents/Unreal Projects/EscapingRoom/Source/EscapingRoomEditor.Target.cs">
 			<Option target="PleaseIgnoreMe"/>
 		</Unit>

@@ -15,7 +15,8 @@ set(MONO_ROOT_PATH "/Users/Shared/Epic Games/UE_4.18/Engine/Binaries/DotNET")
 set(BUILD cd "${MONO_ROOT_PATH}")
 
 # Custom target for EscapingRoomEditor project, Development configuration
-add_custom_target(EscapingRoomEditor-Development ${BUILD} && mono UnrealBuildTool.exe EscapingRoomEditor Mac Development -project="/Users/gabriel/Documents/Unreal Projects/EscapingRoom/EscapingRoom.uproject" -game -progress)
+#add_custom_target(EscapingRoomEditor-Development ${BUILD} && mono UnrealBuildTool.exe EscapingRoomEditor Mac Development -project="/Users/gabriel/Documents/Unreal Projects/EscapingRoom/EscapingRoom.uproject" -game -progress)
+add_custom_target(EscapingRoomEditor-Development cd /Users/Shared/Epic\ Games/UE_4.18/Engine/Binaries/DotNET && mono UnrealBuildTool.exe EscapingRoomEditor Mac Development -project=/Users/gabriel/Documents/Unreal\ Projects/EscapingRoom/EscapingRoom.uproject -game -progress)
 add_custom_target(EscapingRoomEditor-Development-CLEAN ${BUILD} && mono UnrealBuildTool.exe EscapingRoomEditor Mac Development -project="/Users/gabriel/Documents/Unreal Projects/EscapingRoom/EscapingRoom.uproject" -clean)
 
 add_executable(PleaseIgnoreMe ${EscapingRoomEditor_FILES})

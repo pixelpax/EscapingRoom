@@ -203,6 +203,33 @@ Source/EscapingRoom/NewStaticMeshComponent.cpp.s:
 	$(MAKE) -f CMakeFiles/PleaseIgnoreMe.dir/build.make CMakeFiles/PleaseIgnoreMe.dir/Source/EscapingRoom/NewStaticMeshComponent.cpp.s
 .PHONY : Source/EscapingRoom/NewStaticMeshComponent.cpp.s
 
+Source/EscapingRoom/OpenDoor.o: Source/EscapingRoom/OpenDoor.cpp.o
+
+.PHONY : Source/EscapingRoom/OpenDoor.o
+
+# target to build an object file
+Source/EscapingRoom/OpenDoor.cpp.o:
+	$(MAKE) -f CMakeFiles/PleaseIgnoreMe.dir/build.make CMakeFiles/PleaseIgnoreMe.dir/Source/EscapingRoom/OpenDoor.cpp.o
+.PHONY : Source/EscapingRoom/OpenDoor.cpp.o
+
+Source/EscapingRoom/OpenDoor.i: Source/EscapingRoom/OpenDoor.cpp.i
+
+.PHONY : Source/EscapingRoom/OpenDoor.i
+
+# target to preprocess a source file
+Source/EscapingRoom/OpenDoor.cpp.i:
+	$(MAKE) -f CMakeFiles/PleaseIgnoreMe.dir/build.make CMakeFiles/PleaseIgnoreMe.dir/Source/EscapingRoom/OpenDoor.cpp.i
+.PHONY : Source/EscapingRoom/OpenDoor.cpp.i
+
+Source/EscapingRoom/OpenDoor.s: Source/EscapingRoom/OpenDoor.cpp.s
+
+.PHONY : Source/EscapingRoom/OpenDoor.s
+
+# target to generate assembly for a file
+Source/EscapingRoom/OpenDoor.cpp.s:
+	$(MAKE) -f CMakeFiles/PleaseIgnoreMe.dir/build.make CMakeFiles/PleaseIgnoreMe.dir/Source/EscapingRoom/OpenDoor.cpp.s
+.PHONY : Source/EscapingRoom/OpenDoor.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -220,6 +247,9 @@ help:
 	@echo "... Source/EscapingRoom/NewStaticMeshComponent.o"
 	@echo "... Source/EscapingRoom/NewStaticMeshComponent.i"
 	@echo "... Source/EscapingRoom/NewStaticMeshComponent.s"
+	@echo "... Source/EscapingRoom/OpenDoor.o"
+	@echo "... Source/EscapingRoom/OpenDoor.i"
+	@echo "... Source/EscapingRoom/OpenDoor.s"
 .PHONY : help
 
 

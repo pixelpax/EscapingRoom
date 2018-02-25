@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PleaseIgnoreMe.dir/Source/EscapingRoom/EscapingRoom.cpp.o"
   "CMakeFiles/PleaseIgnoreMe.dir/Source/EscapingRoom/NewStaticMeshComponent.cpp.o"
+  "CMakeFiles/PleaseIgnoreMe.dir/Source/EscapingRoom/OpenDoor.cpp.o"
   "PleaseIgnoreMe.pdb"
   "PleaseIgnoreMe"
 )
