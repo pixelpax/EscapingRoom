@@ -4,44 +4,28 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-
-#include "Engine/TriggerVolume.h"
-
-#include "OpenDoor.generated.h"
+#include "DrawDebugHelpers.h"
+#include "Grabber.generated.h"
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class ESCAPINGROOM_API UOpenDoor : public UActorComponent
+class ESCAPINGROOM_API UGrabber : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UOpenDoor();
+	UGrabber();
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:
+public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-private:
-	UPROPERTY(VisibleAnywhere)
-	float OpenAngle = 90.f;
-
-    UPROPERTY(EditAnywhere)
-    ATriggerVolume* PressurePlate;
-
-    UPROPERTY(EditAnywhere)
-	float DoorCloseDelay = .6f;
-
-	AActor* ActorThatOpens; // Remember that pawns inherit from actors!
-    AActor* Owner;
-
-	float DoorOpenTime;
-
-	void OpenDoor();
-    void CloseDoor();
+	// How far ahead of the player can we reach in centimeters
+	UPROPERTY(EditAnywhere)
+	float Reach = 100;
 };
