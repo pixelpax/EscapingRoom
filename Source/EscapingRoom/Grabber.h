@@ -32,8 +32,14 @@ public:
 	float Reach = 100;
     
 private:
+    void FindPhysicsComponent();
+    void FindInputComponent();
+    
     void Grab();
+    void GrabReleased();
+    const FHitResult GetFirstPhysicsBodyInReach();
     
     UPhysicsHandleComponent* PhysicsHandle = nullptr;
     UInputComponent* InputComponent = nullptr;
+    
 };
