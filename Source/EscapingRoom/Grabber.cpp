@@ -93,42 +93,22 @@ void UGrabber::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompone
 			OUT PlayerRotation
 	);
 
-//	UE_LOG(LogTemp, Warning, TEXT("Location: %s, Position: %s"), *PlayerLocation.ToString(), *PlayerRotation.ToString());
-
 	// Debug a vector out in front of the player
 	FVector LineTraceEnd = PlayerLocation + PlayerRotation.Vector() * 100;
 
 
     //	DrawDebugLine(const UWorld *InWorld, const FVector &LineStart, const FVector &LineEnd, const FColor &Color, bool bPersistentLines = false, float LifeTime = -1.f, uint8 DepthPriority = 0, float Thickness = 0.f)
-	DrawDebugLine(
-			GetWorld(),
-			PlayerLocation,
-			LineTraceEnd,
-            FColor(255, 0, 0),
-			false,
-			0.f,
-			0.f,
-			10.f
-	);
+	// DrawDebugLine(
+	// 		GetWorld(),
+	// 		PlayerLocation,
+	// 		LineTraceEnd,
+    //         FColor(255, 0, 0),
+	// 		false,
+	// 		0.f,
+	// 		0.f,
+	// 		10.f
+	// );
 
-	/// Setup query parameters
-	FCollisionQueryParams TraceParameters(FName(TEXT("")), false, GetOwner());
-    
-
-	/// Ray-cast out to reach distance
-    FHitResult Hit;
-    GetWorld()->LineTraceSingleByObjectType(OUT Hit,
-                                            PlayerLocation,
-                                            LineTraceEnd,
-                                            FCollisionObjectQueryParams(ECollisionChannel::ECC_PhysicsBody),
-                                            TraceParameters);
-    
-	// See what we hit
-	AActor* ActorHit = Hit.GetActor();
-    if (ActorHit) {
-		UE_LOG(LogTemp, Warning, TEXT("Object hit: %s"), *(ActorHit->GetName()));
-	}
-    
     if (PhysicsHandle->GrabbedComponent)
     {
         PhysicsHandle->SetTargetLocation(LineTraceEnd);
