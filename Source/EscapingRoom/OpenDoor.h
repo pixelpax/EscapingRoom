@@ -44,4 +44,6 @@ private:
 
 	void OpenDoor();
     void CloseDoor();
+    
+    float GetTotalMassOnPlate();
 };

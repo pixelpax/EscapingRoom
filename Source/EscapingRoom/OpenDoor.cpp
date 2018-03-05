@@ -37,6 +37,18 @@ void UOpenDoor::CloseDoor()
 	Owner->SetActorRotation(NewRotation);
 }
 
+float UOpenDoor::GetTotalMassOnPlate()
+{
+    float TotalMass = 0.f;
+    TArray<AActor *> OverlappingActors;
+    PressurePlate->GetOverlappingActors(OverlappingActors);
+    for(const AActor* Actor : OverlappingActors) {
+        UE_LOG(LogTemp, Warning, TEXT("ACTOR ON PLATE:"), *(Actor->GetName()))
+        TotalMass += Actor->FindComponentByClass<UPrimitiveComponent>()->GetMass();
+    }
+    return TotalMass;
+}
+
 
 // Called every frame
 void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
@@ -44,7 +56,7 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// Poll the Trigger Volume each frame
-	if (PressurePlate->IsOverlappingActor(ActorThatOpens)) {
+	if (GetTotalMassOnPlate() > 50.f) {
 
 		// If the player is in the volume, open the door
 		OpenDoor();
