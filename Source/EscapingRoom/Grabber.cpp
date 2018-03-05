@@ -55,24 +55,23 @@ void UGrabber::FindInputComponent()
 void UGrabber::Grab()
 {
     /// Try and reach any actors with  phyics body collision channel set
-    auto ActorHit = GetFirstPhysicsBodyInReach();
+    auto  HitResult = GetFirstPhysicsBodyInReach();
+    auto ComponentToGrab = HitResult.GetComponent();
+    auto ActorHit = HitResult.GetActor();
     
-    //if (ActorHit) {
-        auto ComponentToGrab = ActorHit.GetComponent();
-        
+    if (ActorHit) {
         /// if we hit something then attach a physics handle
-        PhysicsHandle->GrabComponent(
-                                     ComponentToGrab,
-                                     NAME_None,
-                                     ComponentToGrab->GetOwner()->GetActorLocation(),
-                                     true // Allow rotation
-                                     );
-    //}
+        PhysicsHandle->GrabComponentAtLocation(
+                                               ComponentToGrab,
+                                               NAME_None,
+                                               ComponentToGrab->GetOwner()->GetActorLocation()
+                                               );
+    }
 }
 
 void UGrabber::GrabReleased()
 {
-    UE_LOG(LogTemp, Warning, TEXT("Grab released!"));
+    PhysicsHandle->ReleaseComponent();
 }
 
 
