@@ -1,5 +1,0 @@
-/Users/gabriel/Documents/Unreal Projects/EscapingRoom/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/gabriel/Documents/Unreal Projects/EscapingRoom/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/gabriel/Documents/Unreal Projects/EscapingRoom/cmake-build-debug/CMakeFiles/PleaseIgnoreMe.dir
-/Users/gabriel/Documents/Unreal Projects/EscapingRoom/cmake-build-debug/CMakeFiles/EscapingRoomEditor-Development-CLEAN.dir
-/Users/gabriel/Documents/Unreal Projects/EscapingRoom/cmake-build-debug/CMakeFiles/EscapingRoomEditor-Development.dir
