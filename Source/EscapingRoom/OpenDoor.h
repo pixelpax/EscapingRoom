@@ -10,7 +10,7 @@
 #include "OpenDoor.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnOpenRequest);
-//DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCloseRequest);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCloseRequest);
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ESCAPINGROOM_API UOpenDoor : public UActorComponent
@@ -23,6 +23,9 @@ public:
     
     UPROPERTY(BlueprintAssignable)
     FOnOpenRequest OnOpenRequest;
+    
+    UPROPERTY(BlueprintAssignable)
+    FOnCloseRequest OnCloseRequest;
 
 protected:
 	// Called when the game starts

@@ -31,18 +31,17 @@ void UOpenDoor::OpenDoor()
 	//FRotator NewRotation = FRotator(0.f, OpenAngle, 00.f);
 	//Owner->SetActorRotation(NewRotation);
 	DoorOpenTime = GetWorld()->GetTimeSeconds();
-    if (DoorClosed) {
-        OnOpenRequest.Broadcast();
-    }
-    UE_LOG(LogTemp, Warning, TEXT("Opening Door"))
+    OnOpenRequest.Broadcast();
+    //UE_LOG(LogTemp, Warning, TEXT("Opening Door"))
     DoorClosed=false;
 }
 
 void UOpenDoor::CloseDoor()
 {
-    UE_LOG(LogTemp, Warning, TEXT("Closing Door"))
-	FRotator NewRotation = FRotator(0.f, 0.f, 00.f);
-	Owner->SetActorRotation(NewRotation);
+    //UE_LOG(LogTemp, Warning, TEXT("Closing Door"))
+	//FRotator NewRotation = FRotator(0.f, 0.f, 00.f);
+	//Owner->SetActorRotation(NewRotation);
+    OnCloseRequest.Broadcast();
 }
 
 float UOpenDoor::GetTotalMassOnPlate()
